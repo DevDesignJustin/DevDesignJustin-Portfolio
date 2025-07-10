@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff7b00;
+  --color-white: #fff;
+  --color-dark: #282828;
+  --font-koulen: "Koulen", sans-serif;
+}
+
+* {
+  /* padding: 0; */
+  /* margin: 0; */
+  /* box-sizing: border-box; */
+}
+
+body {
+  background-color: var(--color-dark);
+  font-family: var(--font-koulen);
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1260px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 42px;
+}
+
+span {
+  color: var(--color-primary)
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  .abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .abs-center-y {
+    @apply absolute top-1/2 -translate-y-1/2;
+  }
+  .primary {
+    @apply text-primary
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-8xl text-primary;
+  }
+  .subtitle {
+    @apply text-[20px] text-white;
+  }
+  .icon {
+    @apply w-6 h-6
+  }
+
+  button {
+    @apply flex h-9 text-[16px] w-full
+
+  }
+  .bold {
+    @apply bg-white text-primary
+  }
+  .outline {
+    @apply text-primary border-0 border-white
+  }
+
+  nav {
+    ul {
+      @apply flex;
+    }
+    .nav-item {
+      @apply  h-full w-28 text-white;
+    }
+
+    .logo {
+      @apply flex items-center text-primary mr-auto
+    }
+  }
+}
