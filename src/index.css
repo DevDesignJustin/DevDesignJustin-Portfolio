@@ -45,11 +45,14 @@ span {
     @apply absolute top-1/2 -translate-y-1/2;
   }
   .primary {
-    @apply text-primary
+    @apply text-primary 
   }
 }
 
 @layer components {
+  .line {
+    @apply h-[2px] bg-primary 
+  }
   .title {
     @apply text-8xl text-primary;
   }
@@ -69,6 +72,9 @@ span {
   }
   .outline {
     @apply text-primary border-0 border-white
+  }
+  .transparent {
+    @apply text-primary
   }
 
   nav {
